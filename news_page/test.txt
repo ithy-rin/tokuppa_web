@@ -1,0 +1,11 @@
+title: タイトル
+start: 2022-03-20 00:00:00
+end: 2022-03-31 00:00:00
+img: https://www.tokuppa.com/app/image/cardicon/mastercard.png
+text: 内容
+<img=https://www.tokuppa.com/app/image/cardicon/mastercard.png>
+画像
+<img=https://www.tokuppa.com/app/image/cardicon/mastercard.png url=https://www.tokuppa.com/>
+urlつき画像
+<url=https://www.tokuppa.com/app/image/cardicon/mastercard.png>
+url

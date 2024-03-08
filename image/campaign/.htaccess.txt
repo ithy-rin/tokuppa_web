@@ -1,0 +1,17 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.png -f
+RewriteRule ^(.*)$ $1.png 
+ 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.webp -f
+RewriteRule ^(.*)$ $1.webp
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.jpeg -f
+RewriteRule ^(.*)$ $1.jpeg
+
+
+RewriteCond %{THE_REQUEST} \.(png|webp|jpeg)\ HTTP
+RewriteRule ^(.*)\.(png|webp|jpeg)$ /lp/$1 [R=301,L]

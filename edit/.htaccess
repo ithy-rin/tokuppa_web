@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName  "Restricted Page"
+Require valid-user
+AuthUserFile  /home/c9357042/.htpasswds/tokuppa.com/app/edit/.htpasswd
