@@ -4,10 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-    <h3>5秒後に移動します。</h3>
-    <a>移動しない</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function redirect() {
+            /* ユーザーエージェントの文字列を取得 */
+            var useragent = window.navigator.userAgent.toLowerCase();
+            var ios_link = "https://apps.apple.com/br/app/id1616809233"
+            var android_link = "https://play.google.com/store/apps/details?id=com.tokuppa.tokuppa&hl=ja&gl=US"
+
+            /* OSごとの条件分岐 */
+            if (useragent.indexOf('iphone') != -1) {
+                //iPhone
+                setTimeout(`location.href='${ios_link}'`,0);
+                return ios_link;
+            } else if (useragent.indexOf('ipad') != -1 || useragent.indexOf('macintosh') != -1) {
+                //iPadかMac
+                setTimeout(`location.href='${ios_link}'`,0);
+                return ios_link;
+            } else if (useragent.indexOf('win') != -1) {
+                //windows
+                setTimeout(`location.href='${android_link}'`,0);
+                return android_link;
+            } else if (useragent.indexOf('android') != -1) {
+                //Android
+                setTimeout(`location.href='${android_link}'`,0);
+                return android_link;
+            } else {
+                //その他
+                setTimeout(`location.href='${android_link}'`,0);
+                return android_link;
+            }
+        }
+
+        redirect();
+
+    </script>
+
+
+    <h3>アプリストアのページに移動します。</h3>
+    <h4>移動しない場合は<a href="https://apps.apple.com/br/app/id1616809233">こちら</a></h4>
+    
+
     
 </body>
 </html>
